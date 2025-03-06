@@ -9,26 +9,6 @@ import TypographyHeader from './components/typography/TypographyHeader';
 import Image from 'next/legacy/image'
 
 export default function Home() {
-  // const expertiseData = [
-  //   {
-  //     title: "Nature Powered Beauty",
-  //     description:
-  //       "Using natural ingredients that nourish and enhance skin without harsh chemicals.",
-  //     image: "/img-2.png",
-  //   },
-  //   {
-  //     title: "Climate Resilient Formulas",
-  //     description:
-  //       "Designed to withstand the Philippines' heat, humidity, and ever-changing weather, keeping skin fresh and protected all day.",
-  //     image: "/img-3.png",
-  //   },
-  //   {
-  //     title: "Filipino-Inclusive Shades",
-  //     description:
-  //       "Formulated to complement and celebrate all Filipino skin tones, embracing diversity in beauty.",
-  //     image: "/img-4.png",
-  //   },
-  // ];
   return (
     <>
       <Navbar />
@@ -81,7 +61,7 @@ export default function Home() {
             </Typography>
           </Box>
 
-          <Box sx={{ flex: 1, width: { xs: '100%', sm: '80%', md: '60%', lg: '50%', xl: '35%', },}}>
+          <Box sx={{ flex: 1, width: { xs: '100%', sm: '80%', md: '60%', lg: '50%', xl: '35%', }, }}>
             <VideoSection
               videoSrc='/video/video-2.mp4'
             >
