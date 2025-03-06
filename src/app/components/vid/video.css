@@ -1,0 +1,56 @@
+
+.video-container {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  .video-container video {
+    width: 100% !important;
+    height: 19rem !important;
+    object-fit: cover !important;
+  }
+  .black-block {
+    background-color: var(--background-body) !important;
+  }
+  .c1-block {
+    background-color: var(--box);
+  }
+  .c2-block {
+    background-color: #3052569f;
+  }
+  .transparent-c2-block {
+      background-color: #30525663;
+  }
+  .whole-block{
+    background-color: #305256bf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 200%;
+  }
+  @media (min-width: 1200px) {
+    .color-blocks {
+        width: 100% !important;
+        height: 100% !important;
+        grid-template-columns: repeat(10, 1fr) !important;
+        grid-template-rows: repeat(6, 1fr) !important;
+        position: absolute;
+        top: 0;
+        display: grid;
+    }
+  }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 600px) {   
+    .color-blocks {
+      width: 100% !important;
+      height: 100% !important;
+      grid-template-columns: repeat(10, 1fr) !important;
+      grid-template-rows: repeat(6, 1fr) !important;
+      position: absolute !important;
+      top: 0 !important;
+      display: grid !important;
+      padding-bottom: 1.5% !important;
+    }
+    .color-block {
+      height: 51px !important;
+    }
+  }
