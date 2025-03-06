@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { Box, Stack, Typography, Grid } from '@mui/material';
+import { Box, Stack, Typography, } from '@mui/material';
 import Navbar from '../app/components/navbar';
 import Footer from '../app/components/footer';
 import VideoBackgroundSection from './components/vid/VideoBackgroundSection';
