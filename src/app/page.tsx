@@ -52,7 +52,7 @@ export default function Home() {
 
             <TypographyHeader>Climate Resilient Formulas</TypographyHeader>
             <Typography gutterBottom variant="body1" sx={{ fontSize: '0.880rem' }}>
-              Designed to withstand the Philippines' heat, humidity, and ever-changing weather, keeping skin fresh and protected all day.
+              Designed to withstand the Philippines heat, humidity, and ever-changing weather, keeping skin fresh and protected all day.
             </Typography>
 
             <TypographyHeader>Filipino Inclusive Shades </TypographyHeader>
