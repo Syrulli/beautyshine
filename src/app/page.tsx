@@ -7,20 +7,19 @@ import Footer from '../app/components/footer';
 import VideoBackgroundSection from './components/vid/VideoBackgroundSection';
 import VideoSection from './components/vid/VideoSection';
 import TypographyHeader from './components/typography/TypographyHeader';
-import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import Image from 'next/legacy/image'
 
 const team = [
-  { name: "Crisanne C. Camara", role: "Chief Executive Officer", image: "/ceo.jpg" },
-  { name: "Magnolia V. Dinglasan", role: "Chief Operating Officer", image: "/coo.jpg", parent: "Crisanne C. Camara" },
-  { name: "Jasiel Marjoen M. Garcia", role: "Chief Marketing Officer", image: "/cmo.jpg", parent: "Crisanne C. Camara" },
-  { name: "Carls Angel P. Oyales", role: "Chief Financial Officer", image: "/cfo.jpg", parent: "Crisanne C. Camara" },
-  { name: "Jireh Nicole C. Razon", role: "Operations Manager", image: "/om.jpg", parent: "Magnolia V. Dinglasan" },
-  { name: "Janna Desiree G. Taneo", role: "Product Development Manager", image: "/pdm.jpg", parent: "Magnolia V. Dinglasan" },
-  { name: "Nichol S. Podillana", role: "Sales and Marketing Manager", image: "/smm.jpg", parent: "Jasiel Marjoen M. Garcia" },
-  { name: "Leila F. Francisco", role: "Finance Manager", image: "/fm.jpg", parent: "Carls Angel P. Oyales" },
-  { name: "Leona Marie M. Irinco", role: "Customer Service Specialist", image: "/css.jpg", parent: "Jireh Nicole C. Razon" },
-  { name: "Ronna Liza T. Basister", role: "Finance Specialist", image: "/fs.jpg", parent: "Leila F. Francisco" }
+  { name: "Crisanne C. Camara", role: "Chief Executive Officer", image: "/camara.jpg" },
+  { name: "Magnolia V. Dinglasan", role: "Chief Operating Officer", image: "/dinglasan.jpg", parent: "Crisanne C. Camara" },
+  { name: "Jasiel Marjoen M. Garcia", role: "Chief Marketing Officer", image: "/garcia.jpg", parent: "Crisanne C. Camara" },
+  { name: "Carls Angel P. Oyales", role: "Chief Financial Officer", image: "/oyales.jpg", parent: "Crisanne C. Camara" },
+  { name: "Jireh Nicole C. Razon", role: "Operations Manager", image: "/razon.jpg", parent: "Magnolia V. Dinglasan" },
+  { name: "Janna Desiree G. Taneo", role: "Product Development Manager", image: "/taneo.jpg", parent: "Magnolia V. Dinglasan" },
+  { name: "Nichol S. Podillana", role: "Sales and Marketing Manager", image: "/podillana.jpg", parent: "Jasiel Marjoen M. Garcia" },
+  { name: "Leila F. Francisco", role: "Finance Manager", image: "/francisco.jpg", parent: "Carls Angel P. Oyales" },
+  { name: "Leona Marie M. Irinco", role: "Customer Service Specialist", image: "/lei.jpg", parent: "Jireh Nicole C. Razon" },
+  { name: "Ronna Liza T. Basister", role: "Finance Specialist", image: "/basister.jpg", parent: "Leila F. Francisco" }
 ];
 
 export default function Home() {
@@ -86,8 +85,22 @@ export default function Home() {
         </Stack>
 
         {/* TEAM */}
-        <Stack id="team-section" className='section' direction={{ xs: "column", md: "row" }} justifyContent="center">
-          <Box sx={{ flex: 1, pr: { xs: 2, sm: 3, md: 15 }, pt: { xs: 5, sm: 5, md: 5 }, pb: { xs: '5%', md: '5%', }, pl: { xs: 2, sm: 3, md: 15 }, display: 'flex', flexDirection: 'column', textAlign: 'justify' }} >
+        <Stack id="team-section" className='section' direction="column" alignItems="center">
+          <Box sx={{ textAlign: 'center', mb: '3%' }}>
+            <Typography sx={{ fontSize: '1.5rem', fontWeight: 'bold', mt: { xs: '5%', md: '10%' },}}>
+              Meet the Team
+            </Typography>
+          </Box>
+          <Box
+            sx={{
+              flex: 1,
+              px: { xs: 2, sm: 3, md: 15 },
+              pb: { xs: '5%', md: '5%' },
+              display: 'flex',
+              flexDirection: 'column',
+              textAlign: 'justify',
+            }}
+          >
             <Grid container spacing={2} justifyContent="center">
               {team.map((member, index) => (
                 <Grid key={index} item xs={12} sm={6} md={4} lg={3} display="flex" justifyContent="center">
@@ -98,7 +111,7 @@ export default function Home() {
                       sx={{ width: 80, height: 80, mx: "auto", mb: 1 }}
                     />
                     <CardContent>
-                      <TypographyHeader >
+                      <TypographyHeader>
                         {member.name}
                       </TypographyHeader>
                       <Typography variant="body2" color="textSecondary">
@@ -112,8 +125,7 @@ export default function Home() {
           </Box>
         </Stack>
 
-
-          {/* CORE VALUES */}
+        {/* CORE VALUES */}
         <Stack id="core-values-section" direction={{ xs: 'column', md: 'row' }}>
           <Box sx={{ flex: 1, width: { xs: '100%', sm: '80%', lg: '30%', xl: '30%', } }}>
             <Image
@@ -153,7 +165,7 @@ export default function Home() {
             </TypographyHeader>
 
             <Typography variant="body2"
-              sx={{ textAlign: 'justify', userSelect: 'none', fontSize: '0.9rem', mt:'1%' }}>
+              sx={{ textAlign: 'justify', userSelect: 'none', fontSize: '0.9rem', mt: '1%' }}>
               • Celebrate Diversity.
               Beauty shines in all colors, and so do you.
               <br />

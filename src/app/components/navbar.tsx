@@ -18,7 +18,7 @@ import Image from 'next/image';
 
 const pages = [
   { name: "About", id: "#about-section" },
-  { name: "Team", id: "#team-section" },
+  { name: "Team ", id: "#team-section" },
   { name: "Core Values", id: "#core-values-section" },
 ];
 
