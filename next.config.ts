@@ -1,9 +1,6 @@
-const nextConfig = {
+module.exports = {
   experimental: {
-    appDir: true, // If using the app router
+    appDir: true, // Only if using the App Router
   },
-  reactStrictMode: true,
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  dir: "./src", // Specify the custom directory if needed
 };
-
-export default nextConfig;
