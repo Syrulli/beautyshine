@@ -18,7 +18,7 @@ import Image from 'next/image';
 
 const pages = [
   { name: "About", id: "#about-section" },
-  { name: "Objectives", id: "#objectives-section" },
+  { name: "Team", id: "#team-section" },
   { name: "Core Values", id: "#core-values-section" },
 ];
 
@@ -116,18 +116,16 @@ const NavList = ({ ...props }) => {
 const Header = () => {
   return (
     <AppBar position="fixed" sx={{ backgroundColor: "#213D47" }}>
-      <Container maxWidth="xl" sx={{ px: { xs: 0.1, lg: 6, xl: 4 }, }}>
+      <Container maxWidth="xl" sx={{ px: { xs: 0.1, lg: 6, xl: 4 } }}>
         <Toolbar>
           <Stack
             direction="row"
             justifyContent="space-between"
             alignItems="center"
             width="100%"
-            sx={{
-              px: { md: 5 },
-            }}
+            sx={{ px: { md: 5 } }}
           >
-            <Button href='/'>
+            <Button href="/">
               <Image src="/logo.png" alt="Beautéshine Logo" width={40} height={40} />
             </Button>
             <Nav />

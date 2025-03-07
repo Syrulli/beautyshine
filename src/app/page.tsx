@@ -1,12 +1,27 @@
 "use client";
 import React from 'react';
-import { Box, Stack, Typography, } from '@mui/material';
+import { Box, Stack, Typography, Button, Avatar, Card, CardContent, Grid, } from '@mui/material';
+
 import Navbar from '../app/components/navbar';
 import Footer from '../app/components/footer';
 import VideoBackgroundSection from './components/vid/VideoBackgroundSection';
 import VideoSection from './components/vid/VideoSection';
 import TypographyHeader from './components/typography/TypographyHeader';
+import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import Image from 'next/legacy/image'
+
+const team = [
+  { name: "Crisanne C. Camara", role: "Chief Executive Officer", image: "/ceo.jpg" },
+  { name: "Magnolia V. Dinglasan", role: "Chief Operating Officer", image: "/coo.jpg", parent: "Crisanne C. Camara" },
+  { name: "Jasiel Marjoen M. Garcia", role: "Chief Marketing Officer", image: "/cmo.jpg", parent: "Crisanne C. Camara" },
+  { name: "Carls Angel P. Oyales", role: "Chief Financial Officer", image: "/cfo.jpg", parent: "Crisanne C. Camara" },
+  { name: "Jireh Nicole C. Razon", role: "Operations Manager", image: "/om.jpg", parent: "Magnolia V. Dinglasan" },
+  { name: "Janna Desiree G. Taneo", role: "Product Development Manager", image: "/pdm.jpg", parent: "Magnolia V. Dinglasan" },
+  { name: "Nichol S. Podillana", role: "Sales and Marketing Manager", image: "/smm.jpg", parent: "Jasiel Marjoen M. Garcia" },
+  { name: "Leila F. Francisco", role: "Finance Manager", image: "/fm.jpg", parent: "Carls Angel P. Oyales" },
+  { name: "Leona Marie M. Irinco", role: "Customer Service Specialist", image: "/css.jpg", parent: "Jireh Nicole C. Razon" },
+  { name: "Ronna Liza T. Basister", role: "Finance Specialist", image: "/fs.jpg", parent: "Leila F. Francisco" }
+];
 
 export default function Home() {
   return (
@@ -17,7 +32,8 @@ export default function Home() {
           <VideoBackgroundSection />
         </Stack>
 
-        <Stack className='section' direction={{ xs: 'column', md: 'row' }}>
+        {/* ABOUT */}
+        <Stack id="about-section" className='section' direction={{ xs: 'column', md: 'row' }}>
           <Box sx={{ width: { xs: '100%', sm: '80%', lg: '30%', xl: '30%', }, height: 'auto', mx: 'auto', }}>
             <Image
               src="/img-1.png"
@@ -66,6 +82,94 @@ export default function Home() {
               videoSrc='/video/video-2.mp4'
             >
             </VideoSection>
+          </Box>
+        </Stack>
+
+        {/* TEAM */}
+        <Stack id="team-section" className='section' direction={{ xs: "column", md: "row" }} justifyContent="center">
+          <Box sx={{ flex: 1, pr: { xs: 2, sm: 3, md: 15 }, pt: { xs: 5, sm: 5, md: 5 }, pb: { xs: '5%', md: '5%', }, pl: { xs: 2, sm: 3, md: 15 }, display: 'flex', flexDirection: 'column', textAlign: 'justify' }} >
+            <Grid container spacing={2} justifyContent="center">
+              {team.map((member, index) => (
+                <Grid key={index} item xs={12} sm={6} md={4} lg={3} display="flex" justifyContent="center">
+                  <Card sx={{ textAlign: "center", p: 2, maxWidth: "100%", flexGrow: 1 }}>
+                    <Avatar
+                      src={member.image}
+                      alt={member.name}
+                      sx={{ width: 80, height: 80, mx: "auto", mb: 1 }}
+                    />
+                    <CardContent>
+                      <TypographyHeader >
+                        {member.name}
+                      </TypographyHeader>
+                      <Typography variant="body2" color="textSecondary">
+                        {member.role}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+        </Stack>
+
+
+          {/* CORE VALUES */}
+        <Stack id="core-values-section" direction={{ xs: 'column', md: 'row' }}>
+          <Box sx={{ flex: 1, width: { xs: '100%', sm: '80%', lg: '30%', xl: '30%', } }}>
+            <Image
+              src="/img-3.png"
+              alt="Home image"
+              width={100}
+              height={100}
+              layout="responsive"
+              priority
+            />
+          </Box>
+
+          <Box sx={{ flex: 2, pr: { xs: 2, sm: 4, md: 14 }, pl: { xs: 2, sm: 3, md: 5 }, pt: { xs: 3 }, pb: { xs: 3, md: 3, }, display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'left' }} >
+            <TypographyHeader>
+              Mission
+            </TypographyHeader>
+
+            <Typography
+              variant="body2"
+              sx={{ textAlign: 'justify', userSelect: 'none', fontSize: '0.9rem', mb: '3%', }}
+            >
+              Beautéshine aims to promote empowerment and confidence by creating highly-sustainable, eco-conscious, and inclusive skin care and cosmetic products. Our responsibility is to care with our mother nature as well as to nurture your natural beauty from within.
+            </Typography>
+
+            <TypographyHeader>
+              Vision
+            </TypographyHeader>
+            <Typography
+              variant="body2"
+              sx={{ textAlign: 'justify', userSelect: 'none', fontSize: '0.9rem', mb: '3%', }}
+            >
+              Redefine beauty through empowering Filipinas to embrace and their natural glow, celebrate their heritage and radiate confidence.
+            </Typography>
+
+            <TypographyHeader>
+              Objectives
+            </TypographyHeader>
+
+            <Typography variant="body2"
+              sx={{ textAlign: 'justify', userSelect: 'none', fontSize: '0.9rem', mt:'1%' }}>
+              • Celebrate Diversity.
+              Beauty shines in all colors, and so do you.
+              <br />
+
+              • Confidence in Every Drop.
+              Skincare that empowers self-love and authenticity.
+              <br />
+
+              • Nature & Innovation.
+              Thoughtfully crafted for healthy, radiant skin to bring out your best glow.
+              <br />
+
+              • More Than Beauty.
+              A movement of empowerment and inclusivity.
+            </Typography>
+
           </Box>
         </Stack>
       </Box>

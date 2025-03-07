@@ -1,8 +1,7 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
-import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
-import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-
+import InfoIcon from '@mui/icons-material/Info';
+import QuizIcon from '@mui/icons-material/Quiz';
 const VideoBackgroundSection = () => {
     return (
         <Box className="relative w-full h-screen flex items-center">
@@ -26,8 +25,7 @@ const VideoBackgroundSection = () => {
                 <Stack direction={{ xs: 'column', md: 'row' }} sx={{ mt: 1 }} spacing={1}>
                     <Button
                         component="a"
-                        href="#"
-                        download="#"
+                        href="https://forms.gle/xCZjXF6eb3fm2S4N9"
                         size="small"
                         variant="contained"
                         sx={{
@@ -39,11 +37,11 @@ const VideoBackgroundSection = () => {
                             },
                         }}
                     >
-                        <DownloadOutlinedIcon sx={{ fontSize: '1rem', mr: 0.5 }} /> Workshop Details
+                        <InfoIcon sx={{ fontSize: '1rem', mr: 0.5 }} /> pre-test 
                     </Button>
                     <Button
                         component="a"
-                        href="mailto:2021-204737@rtu.edu.ph"
+                        href="https://forms.gle/ivLTVaBwXsXoTZvk9"
                         size="small"
                         variant="outlined"
                         color="primary"
@@ -57,7 +55,7 @@ const VideoBackgroundSection = () => {
                             },
                         }}
                     >
-                        <EmailOutlinedIcon sx={{ fontSize: '1rem', mr: 0.5 }} /> Send email
+                        <QuizIcon sx={{ fontSize: '1rem', mr: 0.5 }} /> post-test
                     </Button>
                 </Stack>
             </Box>
